@@ -11,8 +11,9 @@ class Temperature:
         self.country = country
         self.city = city
 
-    @property
-    def get(self):
+
+    def get_temperature(self):
+        """Getting actual temperature"""
         h = {
             'pragma': 'no-cache',
             'cache-control': 'no-cache',
@@ -36,5 +37,6 @@ class Temperature:
             return None
 
 
-temperature = Temperature("Ukraine", "Odesa")
-print(temperature.get)
+if __name__ == '__main__':
+    temperature = Temperature("Ukraine", "Odesa")
+    print(temperature.get_temperature())
