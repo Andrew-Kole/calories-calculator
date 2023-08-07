@@ -15,8 +15,11 @@ class Calorie:
 
     def calculate(self):
         """Calculation of calorie amount"""
-        result = 10 * self.weight + 6.5 * self.height - self.temperature * 10
-        return result
+        if self.temperature is not None:
+            result = 10 * self.weight + 6.5 * self.height - self.temperature * 10
+            return result
+        else:
+            return "There is no available data about temperature in chosen location."
 
 
 if __name__ == '__main__':
