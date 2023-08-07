@@ -19,7 +19,7 @@ class Calorie:
             result = 10 * self.weight + 6.5 * self.height - self.temperature * 10
             return result
         else:
-            return "There is no available data about temperature in chosen location."
+            return None
 
 
 if __name__ == '__main__':

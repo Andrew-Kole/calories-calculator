@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Calories Form</title>
     <link rel="stylesheet" href="static/main.css">
 </head>
 <body>
@@ -10,24 +10,27 @@
 <p>Fill in the form and click the button to know how many calories you need!</p>
 <form action="/calories_form" method="post">
     <p>Let's get some info about you first.</p>
-    {{caloriesform.weight.label}} {{caloriesform.weight}}
+    {{calories_form.weight.label}} {{calories_form.weight}}
     <br>
-    {{caloriesform.height.label}} {{caloriesform.height}}
+    {{calories_form.height.label}} {{calories_form.height}}
     <br>
-    {{caloriesform.age.label}} {{caloriesform.age}}
+    {{calories_form.age.label}} {{calories_form.age}}
     <br>
     <hr>
     <p>Today's weather counts too. <br> Tell us where you are so we include today's temperature into the calculations.</p>
-    {{caloriesform.city.label}} {{caloriesform.city}}
+    {{calories_form.city.label}} {{calories_form.city}}
     <br>
-    {{caloriesform.country.label}} {{caloriesform.country}}
+    {{calories_form.country.label}} {{calories_form.country}}
     <br>
 
     <br>
-    {{caloriesform.button}}
+    {{calories_form.button}}
     <br>
     {% if result==True %}
     <h3>You need {{calories}} calories (kcal) today</h3>
+    {% endif %}
+    {% if available==True %}
+    <h3>No available weather data for chosen location</h3>
     {% endif %}
 </form>
 </body>
