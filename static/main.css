@@ -1,6 +1,7 @@
 h2 {
     color: darkgrey;
     text-align: center;
+    font-family: Luminari;
     font-size: 50px;
 }
 
@@ -24,4 +25,8 @@ body {
     background-color: Black;
     color: White;
     padding: 20px;
+}
+
+a {
+    color: red;
 }
